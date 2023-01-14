@@ -5,6 +5,7 @@ Hi, there! 👋
 ## TOC
 
 [Self-signed certificate](self-signed-certificate.md)
+[Nginx load balancing](nginx-load-balancing.md)
 
 ## Contribution
 
