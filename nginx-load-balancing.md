@@ -46,7 +46,7 @@ I will expose ports of my backed so that I can access it from my docker machine.
 docker build . -t nlb 
 docker run -p 80:80 nlb
 
-# LB in on `localhost` (port 80)
+# LB is on `localhost` (port 80)
 
 ```
 
