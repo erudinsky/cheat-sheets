@@ -34,9 +34,11 @@ openssl x509 -in rootCA.pem -text
 
 This should give two files: 
 
-.
-|-- rootCA.key
-|-- rootCA.pem
+```
+├── rootCA.key
+└── rootCA.pem 
+
+```
 
 ## Self Signed Certificate
 
@@ -92,6 +94,20 @@ openssl x509 -req -sha256 -days 36500 -in cert.csr -CA rootCA.pem -CAkey rootCA.
 openssl x509 -text -in cert.pem -noout
 
 ```
+
+This should give another four files (including `san.cnf`):
+
+```
+
+├── cert.csr
+├── cert.key
+├── cert.pem
+├── rootCA.key
+├── rootCA.pem
+└── san.cnf
+
+```
+
 
 ## Certificate formats
 
