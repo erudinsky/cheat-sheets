@@ -1,3 +1,4 @@
 cert*
 rootCA*
 ssl_passwords.txt
+.DS_Store
