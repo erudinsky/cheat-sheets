@@ -8,6 +8,7 @@ Hi, there! 👋
 - [Nginx load balancing](nginx-load-balancing.md)
 - [Infrastructure as Code with Terraform and GitLab](infrastructure-as-code-with-terraform-and-gitLab.md)
 - [GitLab Runner runs out of disk space](gitlab-runner-runs-out-of-disk-space.md)
+- [Quick LDAP sandbox](quick-ldap-sandbox.md)
 
 ## Contribution
 
