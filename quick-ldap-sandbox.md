@@ -30,6 +30,9 @@ docker run \
 
 ```
 
-Access OpenLDAP via web UI: https://<docker_machine>:10443
+Access OpenLDAP via web UI: *https://<docker_machine>:10443*
+
+Username: cn=admin,dc=gitlab,dc=local
+Password: Pa$$word
 
 ![OpenLDAP](.attachments/openldap-rails.png)
