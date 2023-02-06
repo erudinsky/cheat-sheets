@@ -1,0 +1,67 @@
+dn: cn=FyodorDostoyevsky,dc=gitlab,dc=local
+changetype: add
+objectclass: inetOrgPerson
+objectclass: posixAccount
+uid: FyodorDostoyevsky
+uidNumber: 1001
+gidnumber: 500
+homedirectory: /home/users/FyodorDostoyevsky
+cn: FyodorDostoyevsky
+givenname: Fyodor
+sn: Dostoyevsky
+displayname: Fyodor Dostoyevsky
+mail: Fyodor.Dostoyevsky@gitlab.local
+userpassword: Pa$$w0rd
+
+dn: cn=AntonCheckov,dc=gitlab,dc=local
+changetype: add
+objectclass: inetOrgPerson
+objectclass: posixAccount
+uid: AntonCheckov
+gidnumber: 500
+uidNumber: 1002
+homedirectory: /home/users/AntonCheckov
+cn: AntonCheckov
+givenname: Anton
+sn: Checkov
+displayname: Anton Checkov
+mail: Anton.Checkov@gitlab.local
+userpassword: Pa$$w0rd
+
+dn: cn=MikhailLermontov,dc=gitlab,dc=local
+changetype: add
+objectclass: inetOrgPerson
+objectclass: posixAccount
+uid: MikhailLermontov
+gidnumber: 500
+uidNumber: 1003
+homedirectory: /home/users/MikhailLermontov
+cn: MikhailLermontov
+givenname: Mikhail
+sn: Lermontov
+displayname: MikhailLermontov
+mail: MikhailLermontov@gitlab.local
+userpassword: Pa$$w0rd
+
+dn: ou=Groups,dc=gitlab,dc=local
+changetype: add
+objectclass: organizationalUnit
+ou: Groups
+
+dn: ou=Users,dc=gitlab,dc=local
+changetype: add
+objectclass: organizationalUnit
+ou: Users
+
+dn: cn=Admins,ou=Groups,dc=gitlab,dc=local
+changetype: add
+cn: Admins
+objectclass: groupOfUniqueNames
+uniqueMember: cn=MikhailLermontov,dc=gitlab,dc=local
+
+dn: cn=Developers,ou=Groups,dc=gitlab,dc=local
+changetype: add
+cn: Developers
+objectclass: groupOfUniqueNames
+uniqueMember: cn=AntonCheckov,dc=gitlab,dc=local
+uniqueMember: cn=FyodorDostoyevsky,dc=gitlab,dc=local

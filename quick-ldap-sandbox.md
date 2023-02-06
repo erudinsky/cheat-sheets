@@ -37,3 +37,7 @@ Username: cn=admin,dc=gitlab,dc=local
 Password: Pa$$word
 
 ![OpenLDAP](.attachments/openldap-rails.png)
+
+Files are located in the [sandbox](sandbox/quick-ldap-sandbox/) folder.
+
+That's it!
