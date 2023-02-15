@@ -1,24 +1,53 @@
 # PostgreSQL cheat sheet
 
-For development purposes use PostgreSQL. There are multiple ways to run it.
+For development purposes use PostgreSQL. There are multiple ways to run it. The easiest:
 
-```
+```bash
 
 docker run -p 5432:5432 -d -e POSTGRES_PASSWORD=secret postgres
 
 psql -h localhost -p 5432 -U postgres # type `secret` for password
-\l 
-create database mydb;
+
+
+postgres=# \l
+                                 List of databases
+   Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges   
+-----------+----------+----------+------------+------------+-----------------------
+ postgres  | postgres | UTF8     | en_US.utf8 | en_US.utf8 | 
+ template0 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+           |          |          |            |            | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+           |          |          |            |            | postgres=CTc/postgres
+(3 rows)
+
+postgres=# create database mydb;
 CREATE DATABASE
-\l
-\c mydb;
+
+postgres=# \l
+                                 List of databases
+   Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges   
+-----------+----------+----------+------------+------------+-----------------------
+ mydb      | postgres | UTF8     | en_US.utf8 | en_US.utf8 | 
+ postgres  | postgres | UTF8     | en_US.utf8 | en_US.utf8 | 
+ template0 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+           |          |          |            |            | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+           |          |          |            |            | postgres=CTc/postgres
+(4 rows)
+
+postgres=# \c mydb;
+psql (13.6, server 15.2 (Debian 15.2-1.pgdg110+1))
+WARNING: psql major version 13, server major version 15.
+         Some psql features might not work.
+You are now connected to database "mydb" as user "postgres".
+mydb=# 
 \q
 
 ```
 
 Now let's seed some data in it:
 
-```
+```bash
 
 DROP DATABASE abw_db;
 CREATE DATABASE abw_db;
@@ -48,7 +77,7 @@ INSERT INTO books (title, author, pages_num, read)
 
 Validate either everything has been created successfully:
 
-```
+```bash
 
 abw_db=# \c abw_db;
 You are now connected to database "abw_db" as user "postgres".
@@ -63,23 +92,10 @@ abw_db=# SELECT * FROM books;
 abw_db=# 
 
 ```
-The following we can use to connect to remote database server, create database and structure and seed some data.
-
-```
-
-psql sslmode=require -h <servername> -U <user@hostname> -d postgres
-
-\l
-create database abw_db;
-\c abw_db
-\l
-\q
-
-```
 
 Backup and restore:
 
-```
+```bash
 
 # dump db to file
 
@@ -91,5 +107,6 @@ psql sslmode=<mode> -h <host> -U <user> -f abw_db.sql postgres -d postgres
 
 # sslmode can be either require or prefer
 
-
 ```
+
+That's it! 🐘
