@@ -7,7 +7,7 @@ The Red Hat Ansible Automation platform includes several elements, which include
 * Automation Hub – a portal containing certified collections, roles and modules.
 * Automation Analytics – analytics, reports and statistics within clusters consisting of many Ansible Towers.
 
-![Red Hat Ansible Automation platform high level architecture](.attachments/infrastructure-as-code-with-terraform-and-gitLab.png)
+![Red Hat Ansible Automation platform high level architecture](.attachments/red-hat-ansible-automation-platform.png)
 
 # Working with Ansible 
 
