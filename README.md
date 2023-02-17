@@ -10,6 +10,7 @@ Hi, there! 👋
 - [GitLab Runner runs out of disk space](gitlab-runner-runs-out-of-disk-space.md)
 - [Quick LDAP sandbox](quick-ldap-sandbox.md)
 - [PostgreSQL cheat sheet](postgresql-cheat-sheet.md)
+- [Red Hat Ansible Automation Platform cheat sheet](red-hat-ansible-automation-platform-cheat-sheet.md)
 
 ## Contribution
 
