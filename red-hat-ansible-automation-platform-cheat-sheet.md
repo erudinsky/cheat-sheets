@@ -155,6 +155,6 @@ ansible-doc package
 
 ```
 
-Examples are at the bottom of the documentation. 📜
+Examples are at the bottom of almost any documentation. 📜
 
 That's it!
