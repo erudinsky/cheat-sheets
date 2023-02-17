@@ -115,6 +115,10 @@ ansible all -m service -a "name=nginx state=started"
 
 curl -v http://<one-of-the-host>
 
+# Another example (gathering facts)
+
+ansible all -m setup
+
 
 ```
 
