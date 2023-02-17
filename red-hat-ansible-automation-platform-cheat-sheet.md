@@ -145,4 +145,16 @@ ansible-playbook playbook.yml
 
 [Repo](https://github.com/sandervanvugt/ansiblecvc) with ansible playbooks for learning.
 
+# Working with documentation
+
+```bash
+
+# Get information examples on module
+
+ansible-doc package
+
+```
+
+Examples are at the bottom of the documentation. 📜
+
 That's it!
