@@ -103,6 +103,19 @@ cat "evgeny ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 ansible all -m ping
 
+# Another example: 
+
+ansible all -m dnf -a "name=nginx state=latest"
+
+# Yet another example: 
+
+ansible all -m service -a "name=nginx state=started"
+
+# and now:
+
+curl -v http://<one-of-the-host>
+
+
 ```
 
 # Working with Ansible playbooks
