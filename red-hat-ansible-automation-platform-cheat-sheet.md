@@ -149,7 +149,7 @@ ansible-playbook playbook.yml
 
 ```bash
 
-# Get information examples on module
+# Get information and examples on module
 
 ansible-doc package
 
