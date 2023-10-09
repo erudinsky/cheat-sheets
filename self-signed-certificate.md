@@ -52,6 +52,14 @@ openssl genrsa -aes256 -out cert.key 4096
 
 ```
 
+(Optional) if passphrase is not required, remove it from the key: 
+
+```
+
+openssl rsa -in cert.key -out cert-passphraseless.key
+
+```
+
 2. Add the `san.cnf` file for Subject Alternative Name
 
 ```
