@@ -15,6 +15,7 @@ Hi, there! 👋
 - [Setting up multiple SSH keys on one computer](./setting-up-multiple-ssh-keys.md)
 - [Git commands](./your-dose-of-daiiy-git-commands.md)
 - [SSH tunneling](./ssh-tunneling.md)
+- [Azure Storage Blob bash uploader](./azure-storage-blob-bash-uploader.md)
 
 ## Contribution
 
