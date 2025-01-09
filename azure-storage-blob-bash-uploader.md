@@ -30,3 +30,24 @@ touch file.txt
 bash uploader.sh file.txt
 
 ```
+
+## Adding azcopy into mix
+
+```bash
+
+#!/bin/bash
+
+FILE=$1
+STORAGE=mystorage
+CONTAINER=mycontainer
+SAS=
+
+# azcopy install
+
+wget https://aka.ms/downloadazcopy-v10-linux
+tar -xvf downloadazcopy-v10-linux
+sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
+
+azcopy cp $FILE "https://$STORAGE.blob.core.windows.net/$CONTAINER/?$SAS" --recursive=true
+
+```
